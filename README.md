@@ -1,6 +1,3 @@
-# donotfiles
-
-
 ## graphics-related packages
 
 mesa vulkan-intel libva-intel-driver libva-utils mesa-utils vulkan-tools
