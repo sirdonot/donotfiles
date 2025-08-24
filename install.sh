@@ -21,4 +21,4 @@ makepkg -si
 rm -rf yay
 
 #yay packages
-yay -S --needed --noconfirm zen-browser-bin wlogout rofi-games swaync
+yay -S --needed zen-browser-bin wlogout rofi-games swaync swww
