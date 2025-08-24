@@ -6,7 +6,7 @@
 mesa vulkan-intel libva-intel-driver libva-utils mesa-utils vulkan-tools
 libvdpau-va-gl
 
-//set enviroment graphical variables
+## set enviroment graphical variables
 sudo nano /etc/environment
 
 
@@ -34,9 +34,7 @@ sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
 sudo nano /etc/systemd/system/getty@tty1.service.d/autologin.conf
 
 [Service]
-
 ExecStart=
-
 ExecStart=-/sbin/agetty --autologin "user" --noclear --noissue %I $TERM
 
 
