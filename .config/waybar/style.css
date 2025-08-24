@@ -1,0 +1,321 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 10px;
+    min-height: 10px;
+}
+
+@import "colors-waybar.css";
+@define-color fontbg #FFFFFF;
+
+window#waybar {
+background: alpha(@background, 1);
+}
+
+tooltip {
+    background: @background;
+    color: @foreground;
+    border-radius: 0px;
+    border-width: 0px;
+}
+
+#workspaces button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    color: @foreground;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    background: @fontbg;
+    color: @color0;
+    margin-top: 2px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-bottom: 2px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @color2;
+    color: @foreground;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button label {
+  font-size: 12;
+}
+
+#taskbar button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+    color: @fontbg;
+    animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+    background: @color5;
+    color: @color3;
+    margin-top: 2px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 2px;
+    animation: tb_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+    background: @color5;
+    color: @color3;
+    animation: tb_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#tray menu * {
+    min-height: 16px
+}
+
+#tray menu separator {
+    min-height: 10px
+}
+
+#backlight,
+#battery,
+#bluetooth,
+#custom-cpuinfo,
+#cpu,
+#custom-github_hyprdots,
+#custom-gpuinfo,
+#custom-keybindhint,
+#language,
+#memory,
+#mpris,
+#network,
+#custom-notifications,
+#privacy,
+#custom-spotify,
+#taskbar,
+#tray,
+#window,
+#workspaces,
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#custom-rr_end {
+    color: @main-fg;
+    background: transparent;
+    opacity: 1;
+    margin: 0px 5px 0px 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#custom-cava {
+    border-radius: 2px;
+    margin: 0px 7px 0px 7px;
+    padding-top: 6px;
+    padding-bottom: 6px;;
+}
+#workspaces,
+#taskbar {
+    padding: 0px;
+}
+
+#custom-r_end {
+    border-radius: 0px;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+}
+
+#custom-l_end {
+    border-radius: 0px;
+    margin-top: 8px;
+    padding-top: 0px;
+}
+
+#custom-sr_end {
+    border-radius: 0px;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+}
+
+#custom-sl_end {
+    border-radius: 0px;
+    margin-top: 8px;
+    padding-top: 0px;
+}
+
+#custom-rr_end {
+    border-radius: 0px;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+}
+
+#custom-rl_end {
+    border-radius: 0px;
+    margin-top: 8px;
+    padding-top: 0px;
+}
+
+#custom-updates {
+    font-size: 11px;
+    color: @fontbg;
+}
+
+#idle_inhibitor {
+    font-family: "Font Awesome 6 Free";
+    color: @fontbg;
+    font-size: 12.5px;
+    padding-left: 4px;
+    margin: 0px 4px 0px 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 2px 2px 0px 0px;
+}
+
+#clock {
+    font-family: "JetBrainsMono Nerd Font";
+    color: @fontbg;
+    font-size: 15px;
+    margin: 0px 4px 0px 4px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    border-radius: 0px 0px 2px 2px;
+}
+
+#pulseaudio {
+    font-family: "Font Awesome 6 Free";
+    font-size: 13px;
+    color: @fontbg;
+    margin-top: 8px;
+}
+
+#custom-gamelauncher {
+    font-size: 17px;
+    color: @fontbg;
+    background: @color1;
+    margin: 0px 6px 0px 6px;
+    padding: 4px 5px 4px 0px;
+    border-radius: 1px 1px 0px 0px
+}
+
+#custom-cliphist {
+    font-family: "Font Awesome";
+    color: @fontbg;
+    font-size: 13px;
+    background: @color1;
+    margin: 0px 6px 0px 6px;
+    padding: 6px 3px 6px 0px
+}
+
+#custom-theme {
+    font-family: "Font Awesome";
+    color: @fontbg;
+    font-size: 13px;
+    background: @color1;
+    margin: 0px 6px 0px 6px;
+    padding: 6px 0px 6px 0px
+}
+
+#custom-swaync {
+    font-family: "Material Design Icons";
+    font-size: 15px;
+    color: @fontbg;
+    background: @color1;
+    margin: 0px 6px 0px 6px;
+    padding: 6px 0px 6px 0px;
+    border-radius: 0px 0px 1px 1px
+}
+
+#custom-power {
+    font-family: "Font Awesome";
+    font-weight: 900;
+    color: @color2;
+    margin-right: 0px;
+    font-size: 14px;
+}
+
+#custom-separator {
+    padding: 0px;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+#audio,
+#pulseaudio.mic {
+  font-family: "Font Awesome 6 Free";
+  font-size: 14px;
+  border-radius: 2px;
+  color: @fontbg;
+  background: transparent;
+  padding-left: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pulseaudio {
+  font-family: "Font Awesome 6 Free";
+  font-size: 14px;
+  border-radius: 2px;
+  color: @fontbg;
+  padding-left: 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  margin-top: 4px;
+  min-width: 6px;
+  min-height: 60px;
+  border-radius: 2px;
+  background-color: @color1;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+#together,
+#custom-weather,
+
+#custom-hyprkill {
+  font-family: "Font Awesome 6 Free";
+  font-size: 15px;
+  margin-right: 3px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#custom-mark {
+  font-size: 15px;
+}
