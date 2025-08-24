@@ -41,4 +41,5 @@ ExecStart=-/sbin/agetty --autologin "user" --noclear --noissue %I $TERM
 ## creating symlinks
 
 ls -s ~/.cache/wal/colors-kitty.conf ~/.config/kitty/colors-kitty.conf
+
 ls -s ~/.cache/wal/colors-waybar.css ~/.config/waybar/colors-waybar.css
