@@ -9,6 +9,9 @@ libvdpau-va-gl
 ## set enviroment graphical variables
 sudo nano /etc/environment
 
+LIBVA_DRIVER_NAME=i965
+VDPAU_DRIVER=va_gl
+
 
 ## run in terminal
 
