@@ -34,7 +34,9 @@ sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
 sudo nano /etc/systemd/system/getty@tty1.service.d/autologin.conf
 
 [Service]
+
 ExecStart=
+
 ExecStart=-/sbin/agetty --autologin "user" --noclear --noissue %I $TERM
 
 
