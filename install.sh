@@ -22,4 +22,3 @@ rm -rf yay
 
 #yay packages
 yay -S --needed --noconfirm zen-browser-bin wlogout rofi-games swaync
-
