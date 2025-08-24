@@ -1,0 +1,4 @@
+@theme "~/.cache/wal/colors-rofi-dark.rasi"
+* {
+    text-color: #FFFFFF;
+}

@@ -1,0 +1,108 @@
+/**
+ * ROFI Layout 
+ *
+ * Game launcher 3: span vertical left 
+ * 
+ * User: The HyDE Project [  span vertical left ]
+ * Copyright: The HyDE Project
+ */
+
+// Config //
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "CaskaydiaCove Nerd Font Bold 10";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+// Main //
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       38%;
+    height:                      100%;
+    location:                    west;
+    anchor:                      west;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      0em;
+    border-radius:               0em;
+    border-color:                transparent;
+    background-color:            transparent;
+}
+mainbox {
+    enabled:                     true;
+    children:                    [ "entry", "listview" ];
+    background-color:            @background;
+}
+
+
+// Lists //
+listview {
+    enabled:                     true;
+    columns:                     3;
+    spacing:                     1.25em;
+    padding:                     0.6em 3em 0.6em 3em;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     true;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+
+// Entry //
+entry {
+    enabled:                     false;
+    expand:                      false;
+    padding:                     2em 1.8em 0.5em 2em;
+    horizontal-align:            0.5;
+    spacing:                     0em;
+    text-color:                  @text-color;
+    background-color:            transparent;
+    cursor:                      text;
+    placeholder-color:           @foreground;
+}
+
+// Elements //
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    spacing:                     1em;
+    padding:                     5px;
+    border-radius:               2px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+element selected.normal {
+    background-color:            @selected-normal-background;
+    text-color:                  @background;
+}
+element-icon {
+    size:                        26%;
+    spacing:                     0em;
+    padding:                     0em;
+    cursor:                      inherit;
+    border-radius:               0em;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-text {
+    enabled:                     true;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    spacing:                     0em;
+    padding:                     0.3em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}

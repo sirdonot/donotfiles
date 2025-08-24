@@ -1,0 +1,154 @@
+// Config //
+configuration {
+    modi:                        "drun,filebrowser,window,run";
+    show-icons:                  true;
+    display-drun:                " ";
+    display-run:                 " ";
+    display-filebrowser:         " ";
+    display-window:              " ";
+    drun-display-format:         "{name}";
+    window-format:               "{w}{t}";
+    font:                        "CaskaydiaCove Nerd Font 10";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+// Main //
+window {
+    height:                      33em;
+    width:                       63em;
+    transparency:                "real";
+    fullscreen:                  false;
+    enabled:                     true;
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border-color:                @selected-urgent-background;
+    border:                      3px solid;
+    background-color:            @background;
+}
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 horizontal;
+    children:                    [ "dummywall" , "listbox" ];
+    background-color:            transparent;
+}
+dummywall {
+    spacing:                     0em;
+    padding:                     0em;
+    width:                       37em;
+    expand:                      false;
+    orientation:                 horizontal;
+    children:                    [ "mode-switcher" , "inputbar" ];
+    background-color:            @active-background;
+    background-image:            url("~/.cache/wal/background.png", height);
+}
+
+
+// Modes //
+mode-switcher{
+    orientation:                 vertical;
+    enabled:                     true;
+    width:                       3.8em;
+    padding:                     9.2em 0.5em 9.2em 0.6em;
+    spacing:                     1.2em;
+    background-color:            @background;
+    // background-image:            url("~/.config/rofi/foreground.png", height); //
+}
+button {
+    cursor:                      pointer;
+    border-radius:               2em;
+    background-color:            @background;
+    text-color:                  @text-color;
+}
+button selected {
+    background-color:            @selected-active-background;
+    text-color:                  @text-color;
+}
+
+
+// Inputs //
+inputbar {
+    enabled:                     true;
+    children:                    [ "entry" ];
+    background-color:            transparent;
+}
+entry {
+    enabled:                     false;
+}
+
+
+// Lists //
+listbox {
+    spacing:                     0em;
+    padding:                     2em;
+    children:                    [ "dummy" , "listview" , "dummy" ];
+    background-color:            transparent;
+}
+listview {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    expand:                      false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+dummy {
+    background-color:            transparent;
+}
+
+
+// Elements //
+element {
+    enabled:                     true;
+    spacing:                     0.8em;
+    padding:                     0.4em 0.4em 0.4em 1.5em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+element selected.normal {
+    background-color:            @selected-normal-background;
+    text-color:                  @background;
+}
+element-icon {
+    size:                        2.8em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+// Error message //
+error-message {
+    text-color:                  @text-color;
+    background-color:            @background;
+    text-transform:              capitalize;
+    children:                    [ "textbox" ];
+}
+
+textbox {
+    text-color:                  inherit;
+    background-color:            inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
